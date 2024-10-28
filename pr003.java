@@ -2,7 +2,11 @@ class Cars {
 	int pass; // количества пассажиров
 	int volume; // емкость бензобака
 	double fuel; // расходж топлива на 100 км
-
+	Cars(int p, int v, double f) { //констурктор класса
+		pass = p;
+		volume = v;
+		fuel = f;
+	}
 	void range() {
 		System.out.println("Растояние на полном баке: " + (volume/fuel*100));
 	}
@@ -17,15 +21,15 @@ class Cars {
 }
 class pr003 {
 	public static void main(String[] args) {
-		Cars Honda = new Cars();
-		Honda.pass  = 2;
-	       	Honda.volume = 55;
-		Honda.fuel = 20.0;
+		Cars Honda = new Cars(2, 55, 20.0);
+		//Honda.pass  = 2;
+	       	//Honda.volume = 55;
+		//Honda.fuel = 20.0;
 
-		Cars BMW = new Cars();
-		BMW.pass = 5;
-		BMW.volume = 40;
-		BMW.fuel = 15.5;
+		Cars BMW = new Cars(5, 40, 15.5);
+		//BMW.pass = 5;
+		//BMW.volume = 40;
+		//BMW.fuel = 15.5;
 
 		System.out.println("Параметры Хонды: ");
 		System.out.println("Количество пассажиров: " + Honda.pass + " Объем бака: " + Honda.volume + " Расход топлива " + Honda.fuel);
